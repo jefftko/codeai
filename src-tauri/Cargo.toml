@@ -1,8 +1,8 @@
 [package]
 name = "app"
 version = "0.1.0"
-description = "A Tauri App"
-authors = ["you"]
+description = "CodeAI App"
+authors = ["Jianbo Zhu"]
 license = ""
 repository = ""
 default-run = "app"

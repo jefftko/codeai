@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Inter as FontSans } from "next/font/google"
 import "./globals.css";
+import {
+  TooltipProvider,
+} from "@/components/ui/tooltip"
 
 //const inter = Inter({ subsets: ["latin"] });
 
@@ -27,7 +30,11 @@ export default function RootLayout({
       <body className={cn(
           "min-h-screen bg-background font-sans antialiased",
           fontSans.variable
-        )}>{children}</body>
+        )}>
+        <TooltipProvider>
+        {children}
+        </TooltipProvider>
+        </body>
     </html>
   );
 }
