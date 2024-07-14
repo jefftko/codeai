@@ -14,6 +14,7 @@ const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
 })
+import AppProvider from "./app-provider"
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -31,9 +32,11 @@ export default function RootLayout({
           "min-h-screen bg-background font-sans antialiased",
           fontSans.variable
         )}>
+        <AppProvider>
         <TooltipProvider>
         {children}
         </TooltipProvider>
+        </AppProvider>
         </body>
     </html>
   );
